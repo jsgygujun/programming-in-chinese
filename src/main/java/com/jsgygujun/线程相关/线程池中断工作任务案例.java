@@ -12,14 +12,14 @@ public class 线程池中断工作任务案例 {
 
     private final ExecutorService 线程池 = Executors.newSingleThreadExecutor();
 
-    private Future<?> f;
+    private Future<?> 任务句柄;
 
     private void 开始执行工作任务(Runnable 任务) {
-        f = 线程池.submit(任务);
+        任务句柄 = 线程池.submit(任务);
     }
 
     private void 停止执行工作任务() {
-        f.cancel(true);
+        任务句柄.cancel(true);
     }
 
     private void 关闭线程池() {
