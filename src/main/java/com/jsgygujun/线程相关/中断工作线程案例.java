@@ -1,6 +1,10 @@
 package com.jsgygujun.线程相关;
 
 /**
+ * 中断线程的方法， 调用Thread.interrupt方法。
+ * 被中断的线程：
+ *              1. 跑出了InterruptedException异常
+ *              2. Thread.currentThread().isInterrupted()标志被置为1
  * @author GuJun
  * @date 2020/11/4
  */
@@ -15,6 +19,7 @@ public class 中断工作线程案例 {
                     System.out.println("IO密集型工作线程 run() " + i);
                 }
             } catch (InterruptedException e) {
+                // 当外部调用线程对象的interrupt方法时，程序执行到这里。
                 e.printStackTrace();
             } finally {
                 System.out.println("当前工作线程被中断了，到这里执行清理工作！");
