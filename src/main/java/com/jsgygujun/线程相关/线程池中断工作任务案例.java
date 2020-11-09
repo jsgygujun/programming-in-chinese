@@ -6,6 +6,7 @@ import java.util.concurrent.Future;
 
 /**
  * 线程池中断线程的方法，通过Future.cancel(true)方法
+ * 情形类似Thread.interrupt
  * @author GuJun
  * @date 2020/11/4
  */
