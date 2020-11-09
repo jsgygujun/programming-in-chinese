@@ -5,6 +5,9 @@ import java.util.concurrent.*;
 public class 线程池任务超时案例 {
 
 
+    /**
+     * 具体的工作任务
+     */
     private static class 工作任务 implements Runnable {
         public void run() {
             try {
@@ -21,6 +24,9 @@ public class 线程池任务超时案例 {
         }
     }
 
+    /**
+     * 线程池循环执行某个任务
+     */
     private static class 循环执行任务线程 extends Thread {
         private final ExecutorService 线程池;
         private final Runnable 任务;
