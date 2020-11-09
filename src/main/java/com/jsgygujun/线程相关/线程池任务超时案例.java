@@ -16,7 +16,7 @@ public class 线程池任务超时案例 {
                 String s = "a:a";
                 System.out.println(s.split(":")[3]); // 抛出异常
             } catch (InterruptedException e) {
-                System.out.println("刷图任务被中断！");
+                System.out.println("工作任务被中断！");
             }
         }
     }
